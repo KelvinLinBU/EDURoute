@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Simple_Calculator_App</string>
+    <string-array name="numbers_array">
+            <item>One</item>
+            <item>Two</item>
+            <item>Three</item>
+            <item>Four</item>
+            <item>Five</item>
+            <item>Six</item>
+            <item>Seven</item>
+            <item>Eight</item>
+            <item>Nine</item>
+            <item>Zero</item>
+    </string-array>
+    <string-array name="operations_array">
+        <item>*</item>
+        <item>/</item>
+        <item>+</item>
+        <item>-</item>
+        <item>%</item>
+    </string-array>
+
+
+
+</resources>
