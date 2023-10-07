@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Simple_Calculator_App"
         tools:targetApi="31">
         <activity
-            android:name=".ui.theme.innerinner"
+            android:name=".innerinner"
             android:exported="false" />
         <activity
             android:name=".FloorPlan"
