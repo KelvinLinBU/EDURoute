@@ -1,2 +1,2 @@
-# Simple_Calculator_App
-This is a simple calculator Android app written in Kotlin and XML. It can handle divide by 0, and empty field error cases. It handles +,-,*,/, and % operations.
+# EDURoute 
+This is a mobile application called EDURoute which is designed to help users navigate through college campuses. It is an android app written in Kotlin and XML. Also, the main app file is called simple_calculator app. This is a type and actually the EDURoute app. This app is still a work in progress. 
