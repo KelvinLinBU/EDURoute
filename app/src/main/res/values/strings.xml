@@ -1,25 +1,22 @@
 <resources>
     <string name="app_name">Simple_Calculator_App</string>
-    <string-array name="numbers_array">
-            <item>One</item>
-            <item>Two</item>
-            <item>Three</item>
-            <item>Four</item>
-            <item>Five</item>
-            <item>Six</item>
-            <item>Seven</item>
-            <item>Eight</item>
-            <item>Nine</item>
-            <item>Zero</item>
-    </string-array>
-    <string-array name="operations_array">
-        <item>*</item>
-        <item>/</item>
-        <item>+</item>
-        <item>-</item>
-        <item>%</item>
+
+    <string-array name="buildings_array">
+        <item>N/A</item>
+        <item>CDS - 665 Commonwealth Ave</item>
+        <item>CAS</item>
+        <item>QST</item>
+        <item>SHA</item>
+        <item>ENG</item>
     </string-array>
 
-
+    <string-array name="floors_array">
+        <item>N/A</item>
+        <item>Ground Floor</item>
+        <item>2nd Floor</item>
+        <item>3rd Floor</item>
+        <item>4th Floor</item>
+        <item>5th Floor</item>
+    </string-array>
 
 </resources>

@@ -19,6 +19,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import android.view.LayoutInflater
+import android.content.Intent
 
 
 class MainActivity : ComponentActivity() {
@@ -28,75 +29,36 @@ class MainActivity : ComponentActivity() {
         val spinner_operations: Spinner = findViewById(R.id.spinner_operations)
         ArrayAdapter.createFromResource(
             this,
-            R.array.operations_array,
+            R.array.buildings_array,
             android.R.layout.simple_spinner_item
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner_operations.adapter = adapter
         }
 
-        val calculate_button = findViewById<Button>(R.id.calculate);
-        calculate_button.setOnClickListener {
-            makeCalculations()
+        val submit_button = findViewById<Button>(R.id.submit_button);
+        submit_button.setOnClickListener {
+            var school_field = findViewById<TextView>(R.id.school_name).text.toString()
+            var building_choice = findViewById<Spinner>(R.id.spinner_operations).selectedItem.toString()
+            if (school_field == ""){
+                Toast.makeText(this, "Enter a School!", Toast.LENGTH_LONG).show()
+            }
+            else if(school_field != "Boston University"){
+                Toast.makeText(this, "Invalid School!", Toast.LENGTH_LONG).show()
+            }
+            else if(building_choice == "N/A"){
+                Toast.makeText(this, "No Building Selected!", Toast.LENGTH_LONG).show()
+            }
+            else{
+                var correct_toast = Toast.makeText(this,"Welcome Terrier!" , Toast.LENGTH_SHORT)
+                correct_toast.show()
+                val main_app = Intent(this, MainApp::class.java)
+                startActivity(main_app)
 
+            }
         }
     }
-      fun makeCalculations() {
-          var b=true;
-          if(findViewById<TextView>(R.id.operand_one).text.isEmpty()){
-              findViewById<TextView>(R.id.output).text = "Fields are empty!"
-          b=false
-          }
-          if(findViewById<TextView>(R.id.operand_two).text.isEmpty()){
-              findViewById<TextView>(R.id.output).text = "Fields are empty!"
-              b=false;
-          }
-          if(b==true){
-          var number1: Float = findViewById<TextView>(R.id.operand_one).text.toString().toFloat()
-          var number2: Float = findViewById<TextView>(R.id.operand_two).text.toString().toFloat()
-          var result: Float = 0.0F
-          var operationchoice: String = findViewById<Spinner>(R.id.spinner_operations).selectedItem.toString()
-
-
-
-
-          when(operationchoice) {
-              "+" -> {
-                  result = number1 + number2
-                  findViewById<TextView>(R.id.output).text = result.toString()
-              }
-              "-" -> {
-                  result = number1 - number2
-                  findViewById<TextView>(R.id.output).text = result.toString()
-              }
-              "*" -> {
-                  result = number1 * number2
-                  findViewById<TextView>(R.id.output).text = result.toString()
-              }
-              "/" -> {
-                  if(number2 != 0F){
-                  result = number1 / number2
-                  findViewById<TextView>(R.id.output).text = result.toString()
-              }
-                  else{
-                      findViewById<TextView>(R.id.output).text = "Divide by 0"
-                  }
-
-              }
-              "%" -> {
-                  result = number1 % number2
-                  findViewById<TextView>(R.id.output).text = result.toString()
-              }
-              else -> {result = 5F
-              findViewById<TextView>(R.id.output).text = result.toString()
-          }}
-          }
-
-      }
-
-    }
-
-
+}
 
 
 

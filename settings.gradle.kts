@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Simple_Calculator_App"
+rootProject.name = "EDURoute"
 include(":app")

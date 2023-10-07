@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FloorPlan"
+    android:orientation="vertical"
+
+
+
+
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="465dp"
+        android:layout_height="315dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/topinner_foreground" />
+
+    <ImageButton
+        android:id="@+id/pic_button"
+        android:layout_width="374dp"
+        android:layout_height="294dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@mipmap/middleinner"
+        android:text="yay"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="Select any room to view its number, directions and more!"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
